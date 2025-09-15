@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NullShade | Cybersecurity Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NullShade | Cybersecurity Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -37,21 +37,21 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 6%;
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
         }
 
         .logo {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             gap: 0.75rem;
             text-decoration: none;
             color: #2c3e50;
         }
 
         .logo-icon {
-            width: 70px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
             position: relative;
             display: flex;
             align-items: center;
@@ -59,9 +59,9 @@
         }
 
         .logo-circle {
-            width: 66px;
-            height: 66px;
-            border: 6px solid #a0a0a0;
+            width: 100px;
+            height: 100px;
+            border: 14px solid #a0a0a0;
             border-radius: 50%;
             position: relative;
             background: white;
@@ -72,8 +72,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 44px;
-            height: 44px;
+            width: 56px;
+            height: 56px;
             background: #2c3e50;
             border-radius: 50%;
         }
@@ -81,18 +81,20 @@
         .logo-inner::after {
             content: '';
             position: absolute;
-            top: 2px;
-            right: 2px;
-            width: 8px;
-            height: 8px;
+            bottom: 4px;
+            right: 3px;
+            width: 14px;
+            height: 14px;
             background: white;
             border-radius: 50%;
         }
 
         .logo-text {
-            font-size: 1.5rem;
+            font-size: 3rem;
             font-weight: 600;
             letter-spacing: -0.02em;
+            line-height: 1;
+            padding-bottom: 10px;
         }
 
         .logo-text .shade {
@@ -120,8 +122,8 @@
         /* Hero Section */
         .hero {
             padding: 140px 6% 100px;
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
         }
 
         .hero-content {
@@ -175,8 +177,8 @@
         /* Sections */
         section {
             padding: 80px 6%;
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
         }
 
         .section-title {
@@ -339,17 +341,16 @@
         /* Contact Section */
         .contact {
             background: #fafbfc;
-            text-align: center;
+            text-align: left;
         }
 
         .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 800px;
         }
 
         .contact-links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 1.5rem;
             margin-top: 3rem;
         }
@@ -399,6 +400,34 @@
             
             .mobile-menu-toggle {
                 display: block;
+            }
+
+            .logo-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-circle {
+                width: 60px;
+                height: 60px;
+                border: 6px solid #a0a0a0;
+            }
+
+            .logo-inner {
+                width: 32px;
+                height: 32px;
+            }
+
+            .logo-inner::after {
+                width: 10px;
+                height: 10px;
+                bottom: 3px;
+                right: 2px;
+            }
+
+            .logo-text {
+                font-size: 1.8rem;
+                padding-bottom: 6px;
             }
             
             .hero {
@@ -450,218 +479,167 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home" class="logo">
-                <div class="logo-icon">
-                    <div class="logo-circle">
-                        <div class="logo-inner"></div>
-                    </div>
-                </div>
-                <span class="logo-text">Null<span class="shade">Shade</span></span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#writeups">Writeups</a></li>
-                <li><a href="#hardware">Hardware</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            <button class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Cybersecurity<br>Specialist</h1>
-            <p class="subtitle">Pentesting • Hardware Hacking • Vulnerability Research</p>
-            <p class="description">Especializado en encontrar y documentar vulnerabilidades en sistemas y aplicaciones, con enfoque en seguridad web, análisis de hardware y técnicas de pentesting avanzadas.</p>
-            <a href="#about" class="cta-button">
+<header>
+<nav>
+<a class="logo" href="#home">
+<div class="logo-icon">
+<div class="logo-circle">
+<div class="logo-inner"></div>
+</div>
+</div>
+<span class="logo-text">Null<span class="shade">Shade</span></span>
+</a>
+<ul class="nav-links">
+<li><a href="#home">Inicio</a></li>
+<li><a href="#about">Sobre mí</a></li>
+<li><a href="/writeups/">Writeups</a></li>
+<li><a href="/hardware/">Hardware</a></li>
+<li><a href="/ctf/">CTF</a></li>
+<li><a href="#contact">Contacto</a></li>
+</ul>
+<button class="mobile-menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+</nav>
+</header>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Ciberseguridad ofensiva</h1>
+<p class="subtitle">Pentesting • Hardware Hacking • Red Teaming</p>
+<p class="description">Me centro en entender y documentar vulnerabilidades reales en entornos web, sistemas internos y dispositivos conectados. Trabajo combinando técnicas de pentesting, análisis de red y exploración de hardware.</p>
+<a class="cta-button" href="#about">
                 Conoce mi trabajo
                 <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2 class="section-title">Sobre mí</h2>
-        <p class="section-subtitle">Profesional enfocado en ciberseguridad con experiencia práctica en pentesting y análisis de vulnerabilidades.</p>
-        
-        <div class="about-content">
-            <div class="about-text">
-                <p>Soy un especialista en ciberseguridad apasionado por descubrir vulnerabilidades y documentar técnicas de explotación. Mi trabajo se centra en auditorías de seguridad, análisis de aplicaciones web y investigación en hardware.</p>
-                
-                <p>A través de plataformas como Hack the Box y proyectos personales, mantengo mis habilidades actualizadas y exploro nuevas metodologías de seguridad, siempre documentando mis hallazgos para compartir conocimiento con la comunidad.</p>
-                
-                <div class="skills">
-                    <h3>Especialidades</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Web Application Security</span>
-                        <span class="skill-tag">Network Penetration Testing</span>
-                        <span class="skill-tag">Hardware Analysis</span>
-                        <span class="skill-tag">Vulnerability Research</span>
-                        <span class="skill-tag">Linux Systems</span>
-                        <span class="skill-tag">Python Scripting</span>
-                        <span class="skill-tag">Firmware Analysis</span>
-                        <span class="skill-tag">OSINT</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Máquinas Resueltas</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">25+</div>
-                    <div class="stat-label">Writeups Publicados</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="writeups">
-        <h2 class="section-title">Writeups & Research</h2>
-        <p class="section-subtitle">Documentación detallada de vulnerabilidades, técnicas de explotación y metodologías de pentesting.</p>
-        
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="portfolio-item-icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <h3>Hack the Box</h3>
-                <p>Writeups completos de máquinas Linux y Windows, documentando desde reconocimiento inicial hasta escalada de privilegios, incluyendo técnicas avanzadas de explotación.</p>
-                <div class="portfolio-links">
-                    <a href="#" class="portfolio-link">
+</a>
+</div>
+</section>
+<section class="about" id="about">
+<h2 class="section-title">Sobre mí</h2>
+<p class="section-subtitle">Especialista en ciberseguridad ofensiva con experiencia real en entornos profesionales.</p>
+<div class="about-content">
+<div class="about-text">
+<p>Trabajo como profesional en el ámbito de la ciberseguridad ofensiva, realizando auditorías técnicas, simulaciones de ataques, análisis de vulnerabilidades y pruebas de penetración en infraestructuras reales. Estoy certificado con <strong>OSCP (Offensive Security Certified Professional)</strong> y mantengo un enfoque práctico, documentado y sin adornos.</p>
+<p>He trabajado con empresas e instituciones en análisis de seguridad interna y externa, ataques dirigidos tipo Red Team, evaluación de hardware embebido y seguridad IoT, desarrollando herramientas propias y exploits adaptados a cada entorno.</p>
+<p>Mi trabajo incluye desde técnicas de evasión frente a EDR/AV modernos, análisis de binarios, explotación en entornos Windows/Linux, hasta ingeniería inversa de firmware y comunicaciones RF. Complemento mi trabajo con investigación constante y generación de contenido técnico como writeups, PoCs y documentación metodológica.</p>
+<p>Puedes consultar parte de mis retos y progreso en mi <a href="https://app.hackthebox.com/profile/nullshadex" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #2c3e50;" target="_blank">perfil de Hack The Box</a>.</p>
+<div class="skills">
+<h3>Especialidades</h3>
+<div class="skills-list">
+<span class="skill-tag">Red Team / Pentesting Interno</span>
+<span class="skill-tag">OSCP / Auditoría ofensiva</span>
+<span class="skill-tag">Explotación en Windows y Linux</span>
+<span class="skill-tag">Evasión AV / EDR</span>
+<span class="skill-tag">Hardware Hacking</span>
+<span class="skill-tag">Reverse Engineering / Reversing</span>
+<span class="skill-tag">Firmware Analysis</span>
+<span class="skill-tag">SDR / RF / IoT</span>
+<span class="skill-tag">Python / C / Bash scripting</span>
+<span class="skill-tag">OSINT y TTPs reales</span>
+</div>
+</div>
+</div>
+<div class="stats">
+<div class="stat-item">
+<div class="stat-number">100+</div>
+<div class="stat-label">Máquinas resueltas (HTB)</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">25+</div>
+<div class="stat-label">Writeups técnicos</div>
+</div>
+</div>
+</div>
+</section>
+<section id="writeups">
+<h2 class="section-title">Writeups &amp; Research</h2>
+<p class="section-subtitle">Documentación detallada de vulnerabilidades, técnicas de explotación y metodologías de pentesting.</p>
+<div class="portfolio-grid">
+<div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-cube"></i>
+</div>
+<h3>Hack the Box</h3>
+<p>Writeups completos de máquinas Linux y Windows, documentando desde reconocimiento inicial hasta escalada de privilegios, incluyendo técnicas avanzadas de explotación.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="/writeups/">
                         Ver writeups
                         <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-item-icon">
-                    <i class="fas fa-flag"></i>
-                </div>
-                <h3>CTF Solutions</h3>
-                <p>Soluciones detalladas de retos de Capture The Flag, abarcando criptografía, análisis forense, reverse engineering y explotación web.</p>
-                <div class="portfolio-links">
-                    <a href="#" class="portfolio-link">
+</a>
+</div>
+</div>
+<div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-flag"></i>
+</div>
+<h3>CTF Solutions</h3>
+<p>Soluciones detalladas de retos de Capture The Flag, abarcando criptografía, análisis forense, reverse engineering y explotación web.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="/ctf/">
                         Ver soluciones
                         <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-item-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <h3>Vulnerability Research</h3>
-                <p>Investigación original de vulnerabilidades en aplicaciones reales, incluyendo análisis de código, proof of concepts y reportes técnicos.</p>
-                <div class="portfolio-links">
-                    <a href="#" class="portfolio-link">
-                        Ver investigación
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="hardware">
-        <h2 class="section-title">Hardware Security</h2>
-        <p class="section-subtitle">Análisis de seguridad en dispositivos hardware, firmware y sistemas embebidos.</p>
-        
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="portfolio-item-icon">
-                    <i class="fas fa-microchip"></i>
-                </div>
-                <h3>Hardware Reverse Engineering</h3>
-                <p>Análisis de circuitos, extracción de firmware y documentación de vulnerabilidades en dispositivos hardware comerciales.</p>
-                <div class="portfolio-links">
-                    <a href="#" class="portfolio-link">
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="hardware">
+<h2 class="section-title">Hardware Security</h2>
+<p class="section-subtitle">Análisis de seguridad en dispositivos hardware, firmware y sistemas embebidos.</p>
+<div class="portfolio-grid"><div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-microchip"></i>
+</div>
+<h3>Exploración de dispositivos físicos</h3>
+<p>Inspección manual de hardware comercial con pruebas de lectura de firmware, extracción de datos e identificación de posibles puntos de análisis.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="/hardware/">
                         Ver análisis
                         <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-item-icon">
-                    <i class="fas fa-wifi"></i>
-                </div>
-                <h3>IoT Security Assessment</h3>
-                <p>Auditorías de seguridad en dispositivos IoT, análisis de protocolos de comunicación y identificación de vectores de ataque.</p>
-                <div class="portfolio-links">
-                    <a href="#" class="portfolio-link">
-                        Ver proyectos
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-item-icon">
-                    <i class="fas fa-memory"></i>
-                </div>
-                <h3>Firmware Analysis</h3>
-                <p>Extracción y análisis estático/dinámico de firmware, búsqueda de backdoors y vulnerabilidades en sistemas embebidos.</p>
-                <div class="portfolio-links">
-                    <a href="#" class="portfolio-link">
-                        Ver resultados
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-item-icon">
-                    <i class="fas fa-broadcast-tower"></i>
-                </div>
-                <h3>RF & Wireless Security</h3>
-                <p>Análisis de seguridad en comunicaciones por radiofrecuencia, incluyendo protocolos como 433MHz, Zigbee y Bluetooth.</p>
-                <div class="portfolio-links">
-                    <a href="#" class="portfolio-link">
-                        Ver experimentos
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="contact-content">
-            <h2 class="section-title">Hablemos</h2>
-            <p class="section-subtitle">¿Tienes un proyecto interesante o quieres colaborar? Me encantaría conocer más sobre tu trabajo.</p>
-            
-            <div class="contact-links">
-                <a href="mailto:contact@nullshade.dev" class="contact-link">
-                    <i class="fas fa-envelope"></i>
+</a>
+</div>
+</div><div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-memory"></i>
+</div>
+<h3>Análisis de comunicaciones inalámbricas</h3>
+<p>Recepción, decodificación y análisis de señales de radiofrecuencia utilizando SDR. Incluye pruebas con dispositivos LoRa, capturas de tráfico RF en entornos reales e investigación básica de satélites meteorológicos como NOAA y METEOR-M.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="/hardware/rf/">
+            Ver proyectos
+            <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="contact-content">
+<h2 class="section-title">Contacto</h2>
+<p class="section-subtitle">Si tienes algo técnico que comentar, quieres intercambiar ideas o simplemente seguir mi trabajo, aquí tienes algunos enlaces.</p>
+<div class="contact-links">
+<a class="contact-link" href="mailto:contact@nullshade.dev">
+<i class="fas fa-envelope"></i>
                     Email
                 </a>
-                <a href="#" class="contact-link">
-                    <i class="fab fa-github"></i>
+<a class="contact-link" href="https://github.com/Nullshadex">
+<i class="fab fa-github"></i>
                     GitHub
                 </a>
-                <a href="#" class="contact-link">
-                    <i class="fab fa-linkedin"></i>
+<a class="contact-link" href="https://app.hackthebox.com/profile/nullshadex">
+<i class="fas fa-cube"></i>
+                    Hack The Box
+                </a>
+<a class="contact-link" href="#">
+<i class="fab fa-linkedin"></i>
                     LinkedIn
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 NullShade. Desarrollado con enfoque en simplicidad y funcionalidad.</p>
-    </footer>
-
-    <script>
+</div>
+</div>
+</section>
+<footer>
+<p>© 2025 NullShade. Desarrollado con enfoque en simplicidad y funcionalidad.</p>
+</footer>
+<script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -691,7 +669,20 @@
         // Simple mobile menu toggle (basic implementation)
         document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
             const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'rgba(255, 255, 255, 0.98)';
+                navLinks.style.padding = '1rem 6%';
+                navLinks.style.borderBottom = '1px solid #e8ecf0';
+                navLinks.style.backdropFilter = 'blur(20px)';
+            }
         });
     </script>
 </body>

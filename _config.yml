@@ -1,0 +1,49 @@
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:name/
+  hardware:
+    output: true
+    permalink: /hardware/:name/
+  ctf:
+    output: true
+    permalink: /ctf/:name/
+  rf:
+    output: true
+    permalink: /hardware/rf/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "writeups"
+    values:
+      layout: "writeup"
+  - scope:
+      path: ""
+      type: "hardware"
+    values:
+      layout: "hardware"
+  - scope:
+      path: ""
+      type: "ctf"
+    values:
+      layout: "ctf"
+  - scope:
+      path: ""
+      type: "rf"
+    values:
+      layout: "rf"
+
+# Configuración básica
+markdown: kramdown
+highlighter: rouge
+
+# URL base (ajusta según tu dominio)
+baseurl: ""
+url: "https://nullshade.dev"
+
+# Configuración de construcción
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - temp_styles.html

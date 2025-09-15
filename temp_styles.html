@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NullShade | Cybersecurity Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #2c3e50;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid #e8ecf0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 6%;
+            max-width: none;
+            margin: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: flex-end;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        .logo-icon {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle {
+            width: 100px;
+            height: 100px;
+            border: 14px solid #a0a0a0;
+            border-radius: 50%;
+            position: relative;
+            background: white;
+        }
+
+        .logo-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            background: #2c3e50;
+            border-radius: 50%;
+        }
+
+        .logo-inner::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            right: 3px;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            padding-bottom: 10px;
+        }
+
+        .logo-text .shade {
+            color: #a0a0a0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 6% 100px;
+            max-width: none;
+            margin: 0;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            letter-spacing: -0.03em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 14px 28px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #34495e;
+            transform: translateY(-1px);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 6%;
+            max-width: none;
+            margin: 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
+
+        /* About Section */
+        .about {
+            background: #fafbfc;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills {
+            margin-top: 3rem;
+        }
+
+        .skills h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background: white;
+            color: #555;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border: 1px solid #e8ecf0;
+            font-weight: 500;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e8ecf0;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            border: 1px solid #e8ecf0;
+            transition: all 0.2s ease;
+        }
+
+        .portfolio-item:hover {
+            border-color: #d1d9e0;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .portfolio-item-icon {
+            width: 48px;
+            height: 48px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #666;
+            font-size: 1.5rem;
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-item p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .portfolio-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s ease;
+        }
+
+        .portfolio-link:hover {
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #fafbfc;
+            text-align: left;
+        }
+
+        .contact-content {
+            max-width: 800px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #2c3e50;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            background: white;
+            border: 1px solid #e8ecf0;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            background: #f8f9fa;
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 6%;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #e8ecf0;
+        }
+
+        /* Mobile Responsive */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .logo-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-circle {
+                width: 60px;
+                height: 60px;
+                border: 6px solid #a0a0a0;
+            }
+
+            .logo-inner {
+                width: 32px;
+                height: 32px;
+            }
+
+            .logo-inner::after {
+                width: 10px;
+                height: 10px;
+                bottom: 3px;
+                right: 2px;
+            }
+
+            .logo-text {
+                font-size: 1.8rem;
+                padding-bottom: 6px;
+            }
+            
+            .hero {
+                padding: 120px 6% 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            section {
+                padding: 60px 6%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem 4%;
+            }
+            
+            .hero,
+            section {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+            
+            .portfolio-item {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="#home">
+<div class="logo-icon">
+<div class="logo-circle">
+<div class="logo-inner"></div>
+</div>
+</div>
+<span class="logo-text">Null<span class="shade">Shade</span></span>
+</a>
+<ul class="nav-links">
+<li><a href="#home">Inicio</a></li>
+<li><a href="#about">Sobre mí</a></li>
+<li><a href="#writeups">Writeups</a></li>
+<li><a href="#hardware">Hardware</a></li>
+<li><a href="#contact">Contacto</a></li>
+</ul>
+<button class="mobile-menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+</nav>
+</header>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Ciberseguridad ofensiva</h1>
+<p class="subtitle">Pentesting • Hardware Hacking • Red Teaming</p>
+<p class="description">Me centro en entender y documentar vulnerabilidades reales en entornos web, sistemas internos y dispositivos conectados. Trabajo combinando técnicas de pentesting, análisis de red y exploración de hardware.</p>
+<a class="cta-button" href="#about">
+                Conoce mi trabajo
+                <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+</section>
+<section class="about" id="about">
+<h2 class="section-title">Sobre mí</h2>
+<p class="section-subtitle">Especialista en ciberseguridad ofensiva con experiencia real en entornos profesionales.</p>
+<div class="about-content">
+<div class="about-text">
+<p>Trabajo como profesional en el ámbito de la ciberseguridad ofensiva, realizando auditorías técnicas, simulaciones de ataques, análisis de vulnerabilidades y pruebas de penetración en infraestructuras reales. Estoy certificado con <strong>OSCP (Offensive Security Certified Professional)</strong> y mantengo un enfoque práctico, documentado y sin adornos.</p>
+<p>He trabajado con empresas e instituciones en análisis de seguridad interna y externa, ataques dirigidos tipo Red Team, evaluación de hardware embebido y seguridad IoT, desarrollando herramientas propias y exploits adaptados a cada entorno.</p>
+<p>Mi trabajo incluye desde técnicas de evasión frente a EDR/AV modernos, análisis de binarios, explotación en entornos Windows/Linux, hasta ingeniería inversa de firmware y comunicaciones RF. Complemento mi trabajo con investigación constante y generación de contenido técnico como writeups, PoCs y documentación metodológica.</p>
+<p>Puedes consultar parte de mis retos y progreso en mi <a href="https://app.hackthebox.com/profile/nullshadex" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #2c3e50;" target="_blank">perfil de Hack The Box</a>.</p>
+<div class="skills">
+<h3>Especialidades</h3>
+<div class="skills-list">
+<span class="skill-tag">Red Team / Pentesting Interno</span>
+<span class="skill-tag">OSCP / Auditoría ofensiva</span>
+<span class="skill-tag">Explotación en Windows y Linux</span>
+<span class="skill-tag">Evasión AV / EDR</span>
+<span class="skill-tag">Hardware Hacking</span>
+<span class="skill-tag">Reverse Engineering / Reversing</span>
+<span class="skill-tag">Firmware Analysis</span>
+<span class="skill-tag">SDR / RF / IoT</span>
+<span class="skill-tag">Python / C / Bash scripting</span>
+<span class="skill-tag">OSINT y TTPs reales</span>
+</div>
+</div>
+</div>
+<div class="stats">
+<div class="stat-item">
+<div class="stat-number">100+</div>
+<div class="stat-label">Máquinas resueltas (HTB)</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">25+</div>
+<div class="stat-label">Writeups técnicos</div>
+</div>
+</div>
+</div>
+</section>
+<section id="writeups">
+<h2 class="section-title">Writeups &amp; Research</h2>
+<p class="section-subtitle">Documentación detallada de vulnerabilidades, técnicas de explotación y metodologías de pentesting.</p>
+<div class="portfolio-grid">
+<div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-cube"></i>
+</div>
+<h3>Hack the Box</h3>
+<p>Writeups completos de máquinas Linux y Windows, documentando desde reconocimiento inicial hasta escalada de privilegios, incluyendo técnicas avanzadas de explotación.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="writeups/">
+                        Ver writeups
+                        <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+</div>
+<a href="/writeups/safe/">Safe</a>
+<div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-flag"></i>
+</div>
+<h3>CTF Solutions</h3>
+<p>Soluciones detalladas de retos de Capture The Flag, abarcando criptografía, análisis forense, reverse engineering y explotación web.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="ctf/">
+                        Ver soluciones
+                        <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="hardware">
+<h2 class="section-title">Hardware Security</h2>
+<p class="section-subtitle">Análisis de seguridad en dispositivos hardware, firmware y sistemas embebidos.</p>
+<div class="portfolio-grid"><div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-microchip"></i>
+</div>
+<h3>Exploración de dispositivos físicos</h3>
+<p>Inspección manual de hardware comercial con pruebas de lectura de firmware, extracción de datos e identificación de posibles puntos de análisis.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="hardware/reverse/">
+                        Ver análisis
+                        <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+</div><div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-memory"></i>
+</div>
+<h3>Firmware Analysis</h3>
+<p>Extracción y análisis estático/dinámico de firmware, búsqueda de backdoors y vulnerabilidades en sistemas embebidos.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="hardware/firmware/">
+                        Ver resultados
+                        <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+</div>
+<div class="portfolio-item">
+<div class="portfolio-item-icon">
+<i class="fas fa-broadcast-tower"></i>
+</div>
+<h3>Análisis de comunicaciones inalámbricas</h3>
+<p>Recepción, decodificación y análisis de señales de radiofrecuencia utilizando SDR. Incluye pruebas con dispositivos LoRa, capturas de tráfico RF en entornos reales e investigación básica de satélites meteorológicos como NOAA y METEOR-M.</p>
+<div class="portfolio-links">
+<a class="portfolio-link" href="hardware/rf/">
+            Ver proyectos
+            <i class="fas fa-external-link-alt"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="contact-content">
+<h2 class="section-title">Contacto</h2>
+<p class="section-subtitle">Si tienes algo técnico que comentar, quieres intercambiar ideas o simplemente seguir mi trabajo, aquí tienes algunos enlaces.</p>
+<div class="contact-links">
+<a class="contact-link" href="mailto:contact@nullshade.dev">
+<i class="fas fa-envelope"></i>
+                    Email
+                </a>
+<a class="contact-link" href="https://github.com/Nullshadex">
+<i class="fab fa-github"></i>
+                    GitHub
+                </a>
+<a class="contact-link" href="https://app.hackthebox.com/profile/nullshadex">
+<i class="fas fa-cube"></i>
+                    Hack The Box
+                </a>
+<a class="contact-link" href="#">
+<i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+</div>
+</div>
+</section>
+<footer>
+<p>© 2025 NullShade. Desarrollado con enfoque en simplicidad y funcionalidad.</p>
+</footer>
+<script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.borderBottomColor = '#d1d9e0';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.borderBottomColor = '#e8ecf0';
+            }
+        });
+
+        // Simple mobile menu toggle (basic implementation)
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'rgba(255, 255, 255, 0.98)';
+                navLinks.style.padding = '1rem 6%';
+                navLinks.style.borderBottom = '1px solid #e8ecf0';
+                navLinks.style.backdropFilter = 'blur(20px)';
+            }
+        });
+    </script>
+</body>
+</html>
