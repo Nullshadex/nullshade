@@ -5,7 +5,7 @@ date: 2024-12-01
 frequency: "137 MHz"
 type: "Satellite"
 description: "Recepción y decodificación de imágenes meteorológicas de satélites NOAA utilizando RTL-SDR"
-image: "/assets/images/rf/noaa_setup.jpg"
+image: "/assets/images/rf/apt.jpg"
 ---
 
 # Decodificación de imágenes NOAA APT
