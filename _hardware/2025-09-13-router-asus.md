@@ -19,7 +19,7 @@ El objetivo era practicar técnicas de hardware hacking y comprobar cómo se alm
 El primer contacto se hizo a través del puerto UART del router.  
 Con un adaptador **FT232** y un terminal serie se capturó el arranque completo del sistema:
 
-![Conexión UART con FT232](IMG_1.jpg)
+![Conexión UART con FT232](/assets/images/Router_asus/IMG_1.jpg)
 
 Datos observados en consola:
 - Bootloader: U-Boot 1.1.3 (2014)
@@ -46,11 +46,11 @@ Para garantizar una lectura fiable, se desoldó el chip de memoria SPI y se ley�
 - Chip identificado: **Winbond W25Q64BV**
 - Método: desoldado → adaptador SOP8 → programador **XGecu T48**
 
-![Chip Winbond desoldado](IMG_4.jpg)
+![Chip Winbond desoldado](/assets/images/Router_asus/IMG_4.jpg)
 
-![Chip soldado al adaptador SOP8](IMG_2.jpg)
+![Chip soldado al adaptador SOP8](/assets/images/Router_asus/IMG_2.jpg)
 
-![Chip en el programador XGecu](IMG_3.jpg)
+![Chip en el programador XGecu](/assets/images/Router_asus/IMG_3.jpg)
 
 Se obtuvieron varias lecturas y se verificó su integridad mediante `sha256sum`.
 
