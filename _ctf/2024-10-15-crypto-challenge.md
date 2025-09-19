@@ -174,12 +174,6 @@ plaintext = bleichenbacher_attack(oracle, n, e, ciphertext)
 print(f"Flag: {plaintext.decode()}")
 ```
 
-## Flag
-
-```
-HTB{p4dd1ng_0r4cl3s_4r3_d4ng3r0us_1n_RS4!}
-```
-
 ## Lecciones aprendidas
 
 1. **Implementaciones de padding**: Nunca revelar información sobre la validez del padding
