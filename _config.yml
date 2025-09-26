@@ -40,7 +40,7 @@ highlighter: rouge
 
 # URL base (ajusta según tu dominio)
 baseurl: ""
-url: "https://nullshade.dev"
+url: "https://nullshade.es"
 
 # Configuración de construcción
 exclude:

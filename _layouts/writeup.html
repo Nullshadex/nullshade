@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>{{ page.title }} - NullShade</title>
+	{% include favicon.html %}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <style>
@@ -176,7 +177,7 @@
             font-weight: 500;
             color: white !important;
         }
-
+		.difficulty-very-easy { background-color: #17a2b8; }
         .difficulty-easy { background-color: #28a745; }
         .difficulty-medium { background-color: #ffc107; color: #333 !important; }
         .difficulty-hard { background-color: #dc3545; }
@@ -256,27 +257,35 @@
             z-index: 9999;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            width: 120%;
+            height: 120%;
             background-color: rgba(0, 0, 0, 0.9);
             cursor: pointer;
         }
 
         .lightbox-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 90%;
-            max-height: 90%;
-        }
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
 
-        .lightbox-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            cursor: default;
-        }
+		.lightbox-content img {
+			max-width: 95%;
+			max-height: 95%;
+			width: auto;
+			height: auto;
+			border-radius: 8px;
+			cursor: default;
+			object-fit: contain;
+			display: block;
+		}
 
         .lightbox-close {
             position: absolute;
