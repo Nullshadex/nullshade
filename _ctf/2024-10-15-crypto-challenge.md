@@ -3,7 +3,7 @@ layout: ctf
 title: "RSA Padding Oracle Attack"
 date: 2024-10-15
 category: "Crypto"
-points: 500
+
 event: "HackTheBox CTF 2024"
 description: "Explotación de un oracle de padding en implementación RSA personalizada"
 ---

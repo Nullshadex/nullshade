@@ -37,6 +37,7 @@ defaults:
 # Configuración básica
 markdown: kramdown
 highlighter: rouge
+future: true
 
 # URL base (ajusta según tu dominio)
 baseurl: ""
